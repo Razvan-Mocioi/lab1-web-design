@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact - Lab 2</title>
+</head>
+<body>
+
+    <a href="#main-content">Sari la conținut</a>
+
+    <header>
+        <h1>Pagina de Contact</h1>
+        <nav aria-label="Navigare principală">
+            <ul>
+                <li><a href="index.html">Acasă</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section>
+            <h2>Trimite-ne un mesaj</h2>
+            
+            <form action="#" method="get" aria-label="Formular de contact">
+                
+                <fieldset>
+                    <legend>Date personale</legend>
+                    <label for="nume">Nume:</label>
+                    <input type="text" id="nume" name="nume_utilizator" required>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Mesajul tău</legend>
+                    <label for="mesaj">Mesaj:</label>
+                    <textarea id="mesaj" name="mesaj_utilizator" required aria-describedby="hint"></textarea>
+                    <p id="hint">Scrie aici orice întrebare ai.</p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Cum ai aflat de noi?</legend>
+                    <input type="radio" id="web" name="sursa" value="web">
+                    <label for="web">Internet</label>
+                    
+                    <input type="radio" id="uni" name="sursa" value="uni">
+                    <label for="uni">Universitate</label>
+                </fieldset>
+
+                <button type="submit">Trimite</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Razvan Mocioi</p>
+    </footer>
+
+</body>
+</html>
