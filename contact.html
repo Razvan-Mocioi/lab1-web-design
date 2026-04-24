@@ -1,104 +1,73 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ro">
 <head>
     <meta charset="UTF-8">
-    <title>Contact - Lab 2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Răzvan Mocioi</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <a href="#main-content">Sari la conținut</a>
+    <a href="#continut-principal" class="skip-link">Sari la conținutul principal</a>
 
     <header>
-        <h1>Pagina de Contact</h1>
-        <nav aria-label="Navigare principală">
-            <ul>
-                <li><a href="index.html">Acasă</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+        <h1>Contactează-mă</h1>
     </header>
 
-    <main id="main-content">
+    <nav>
+        <ul>
+            <li><a href="index.html">Acasă</a></li>
+            <li><a href="about.html">Despre mine</a></li>
+            <li><a href="data.html">Experiență și Educație</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main id="continut-principal">
         <section>
-            <h2>Trimite-ne un mesaj</h2>
-            
-            <form action="#" method="get" aria-label="Formular de contact">
-                
-                <fieldset>
-                    <legend>Date personale</legend>
-                    <label for="nume">Nume:</label>
-                    <input type="text" id="nume" name="nume_utilizator" required>
-                </fieldset>
+            <h2>Trimite un mesaj</h2>
+            <p>Dacă ai întrebări sau propuneri de colaborare, folosește formularul de mai jos.</p>
 
+            <form action="#" method="post">
                 <fieldset>
-                    <legend>Mesajul tău</legend>
-                    <label for="mesaj">Mesaj:</label>
-                    <textarea id="mesaj" name="mesaj_utilizator" required aria-describedby="hint"></textarea>
-                    <p id="hint">Scrie aici orice întrebare ai.</p>
-                </fieldset>
-
-                <fieldset>
-                    <legend>Cum ai aflat de noi?</legend>
-                    <input type="radio" id="web" name="sursa" value="web">
-                    <label for="web">Internet</label>
+                    <legend>Informații de Contact</legend>
                     
-                    <input type="radio" id="uni" name="sursa" value="uni">
-                    <label for="uni">Universitate</label>
+                    <div class="form-group">
+                        <label for="nume">Nume complet:</label>
+                        <input type="text" id="nume" name="nume" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Adresă de e-mail:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
                 </fieldset>
 
-                <button type="submit">Trimite</button>
+                <fieldset>
+                    <legend>Detaliile Mesajului</legend>
+
+                    <div class="form-group">
+                        <label for="subiect">Subiect:</label>
+                        <select id="subiect" name="subiect">
+                            <option value="general">Întrebare generală</option>
+                            <option value="proiect">Propunere proiect</option>
+                            <option value="feedback">Feedback site</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mesaj">Mesajul tău:</label>
+                        <textarea id="mesaj" name="mesaj" rows="5" required></textarea>
+                    </div>
+
+                    <button type="submit">Trimite formularul</button>
+                </fieldset>
             </form>
         </section>
-        <section>
-    <h2>Mesaje Primite</h2>
-    <table border="1">
-        <caption>Messages Received</caption>
-        <thead>
-            <tr>
-                <th scope="col">ID</th>
-                <th scope="col">Name</th>
-                <th scope="col">Email</th>
-                <th scope="col">Message</th>
-                <th scope="col">Date</th>
-                <th scope="col">Priority</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>1</td>
-                <td>Alice</td>
-                <td><a href="mailto:alice@gmail.com">alice@gmail.com</a></td>
-                <td>Hey! Just finished Lab 1!</td>
-                <td>01.01.2026</td>
-                <td><input type="checkbox" checked disabled aria-label="Prioritate ridicată"></td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td rowspan="3">Bob</td>
-                <td rowspan="3"><a href="mailto:bob@e-uvt.ro">bob@e-uvt.ro</a></td>
-                <td>Hey, how's it going?</td>
-                <td>09.02.2026</td>
-                <td><input type="checkbox" disabled aria-label="Prioritate scăzută"></td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>Do you know the deadline for Lab 3?</td>
-                <td>09.02.2026</td>
-                <td><input type="checkbox" checked disabled aria-label="Prioritate ridicată"></td>
-            </tr>
-            <tr>
-                <td>4</td>
-                <td>Can someone share the example solution for Lab 2?</td>
-                <td>21.02.2026</td>
-                <td><input type="checkbox" disabled aria-label="Prioritate scăzută"></td>
-            </tr>
-        </tbody>
-    </table>
-</section>
     </main>
 
     <footer>
-        <p>&copy; 2026 Razvan Mocioi</p>
+        <p>&copy; 2026 Răzvan Mocioi. Hw1 - UVT.</p>
     </footer>
 
 </body>
